@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <Scene />
+      {/* <Scene /> */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-base/50 to-base pointer-events-none" />
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <motion.p
