@@ -2,9 +2,11 @@
 
 import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { Center } from "@react-three/drei";
 import * as THREE from "three";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const STAIRCASE_URL = "/models/stair_without_texture_v2.glb";
 
@@ -23,20 +25,43 @@ export default function Staircase() {
           emissive: "#22d3ee",
           emissiveIntensity: 0.1,
         });
-        console.log("mesh:", mesh);
       }
     });
   }, [scene]);
 
-  // useFrame(({ clock }) => {
-  //   if (group.current) {
-  //     group.current.rotation.y = clock.getElapsedTime() * 0.1;
-  //     group.current.position.y = Math.sin(clock.getElapsedTime() * 0.3) * 0.15;
-  //   }
-  // });
+  useEffect(() => {
+    if (!group.current) return;
+    ScrollTrigger.refresh();
+
+    gsap.to(group.current.rotation, {
+      y: 3 + Math.PI * 2,
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    });
+
+    gsap.to(group.current.position, {
+      y: -0.2,
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
 
   return (
-    <group ref={group} scale={1} position={[-0.5, 0.35, 0 ]} rotation={[0, 3, 0]}>
+    <group ref={group} scale={1} position={[-0.5, 0.35, 0]} rotation={[0, 3, 0]}>
       <primitive object={scene} />
     </group>
   );

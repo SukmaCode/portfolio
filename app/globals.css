@@ -55,7 +55,8 @@ body {
 }
 
 .glass {
-  background: var(--color-glass);
+  /* background: var(--color-glass); */
+  background-color: black;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--color-glass-border);

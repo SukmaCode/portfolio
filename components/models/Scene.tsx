@@ -1,17 +1,19 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+} from "@react-three/drei";
 import Staircase from "./Staircase";
 import Particles from "./Particles";
 import SceneEffects from "./SceneEffects";
-import CameraAnimation from "./CameraAnimation";
-import CameraController from "./CameraController";
 
-
-export default function Scene({children}: {children: React.ReactNode}) {
+export default function Scene() {
   return (
-    <div className="absolute inset-0 z-10">
+    <div className="fixed inset-0 z-0">
+      <div className="absolute inset-0 bg-linear-to-b from-base via-base/50 to-base pointer-events-none z-10" />
       <Canvas
         // camera={{ position: [5, 0, 0], fov: 45 }}
         gl={{ antialias: true, alpha: true }}
@@ -30,18 +32,14 @@ export default function Scene({children}: {children: React.ReactNode}) {
           color="#a78bfa"
         />
         <pointLight position={[0, 5, 0]} intensity={0.5} color="#22d3ee" />
+        <PerspectiveCamera makeDefault position={[-0.02, 0, 1]} fov={20} />
 
         <Staircase />
         <Particles />
-        
-        <CameraAnimation />
-        <CameraController />
-        <PerspectiveCamera makeDefault position={[1, 0, 1]} fov={20} />
-        <OrbitControls makeDefault />
         <SceneEffects />
+
         <Environment preset="night" />
       </Canvas>
-      {children}
     </div>
   );
 }

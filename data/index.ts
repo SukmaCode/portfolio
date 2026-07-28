@@ -12,50 +12,30 @@ export const skillCategories = [
     title: "Frontend",
     icon: "⚛️",
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "Three.js / R3F", level: 80 },
+      { name: "React / Next.js", level: 75 },
+      { name: "TypeScript", level: 50 },
+      { name: "Tailwind CSS", level: 80 },
+      { name: "Three.js / R3F", level: 30 },
     ],
   },
   {
     title: "Backend",
     icon: "⚙️",
     skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Express / NestJS", level: 85 },
-      { name: "GraphQL", level: 78 },
-      { name: "REST API", level: 90 },
+      { name: "Laravel", level: 88 },
+      { name: "Express", level: 50 },
+      { name: "PHP", level: 50 },
+      { name: "REST API", level: 70 },
     ],
   },
   {
     title: "Database",
     icon: "🗄️",
     skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Prisma", level: 88 },
-      { name: "Redis", level: 72 },
-    ],
-  },
-  {
-    title: "DevOps",
-    icon: "🚀",
-    skills: [
-      { name: "Docker", level: 82 },
-      { name: "AWS / GCP", level: 75 },
-      { name: "CI / CD", level: 80 },
-      { name: "Linux", level: 78 },
-    ],
-  },
-  {
-    title: "UI / UX",
-    icon: "🎨",
-    skills: [
-      { name: "Figma", level: 85 },
-      { name: "Design Systems", level: 82 },
-      { name: "Prototyping", level: 78 },
-      { name: "Accessibility", level: 80 },
+      { name: "PostgreSQL", level: 50 },
+      { name: "MongoDB", level: 30 },
+      { name: "MariaDB", level: 88 },
+      { name: "Redis", level: 50 },
     ],
   },
 ] as const;
@@ -97,37 +77,16 @@ export const projects = [
 
 export const experiences = [
   {
-    role: "Senior Full Stack Developer",
-    company: "Tech Company",
-    period: "2024 - Present",
-    description:
-      "Leading development of microservices architecture and mentoring junior developers.",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Startup Inc.",
-    period: "2022 - 2024",
-    description:
-      "Built and deployed scalable web applications serving 100k+ users.",
-  },
-  {
-    role: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2020 - 2022",
-    description:
-      "Developed interactive UIs and design systems for enterprise clients.",
-  },
-  {
     role: "Junior Developer",
     company: "Freelance",
-    period: "2018 - 2020",
+    period: "2023 - 2026",
     description:
       "Built websites and web applications for various clients worldwide.",
   },
 ] as const;
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com/username" },
+  { label: "GitHub", href: "https://github.com/SukmaCode" },
   { label: "LinkedIn", href: "https://linkedin.com/in/username" },
   { label: "Twitter", href: "https://twitter.com/username" },
   { label: "Email", href: "mailto:hello@example.com" },

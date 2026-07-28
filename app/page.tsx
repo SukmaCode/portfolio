@@ -11,18 +11,17 @@ import Scene from "@/components/models/Scene";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
-        <Scene>
-          <Hero />
-          <About />
-        </Scene>
+      <Scene />
+      <main className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
         <Skills />
         <Projects />
         <Experience />
         <Contact />
       </main>
-      <Footer />
+      <Footer className="relative z-10" />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import Scene from "@/components/models/Scene";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
