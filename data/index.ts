@@ -10,7 +10,6 @@ export const navLinks = [
 export const skillCategories = [
   {
     title: "Frontend",
-    icon: "⚛️",
     skills: [
       { name: "React / Next.js", level: 75 },
       { name: "TypeScript", level: 50 },
@@ -20,7 +19,6 @@ export const skillCategories = [
   },
   {
     title: "Backend",
-    icon: "⚙️",
     skills: [
       { name: "Laravel", level: 88 },
       { name: "Express", level: 50 },
@@ -30,7 +28,6 @@ export const skillCategories = [
   },
   {
     title: "Database",
-    icon: "🗄️",
     skills: [
       { name: "PostgreSQL", level: 50 },
       { name: "MongoDB", level: 30 },
@@ -57,22 +54,6 @@ export const projects = [
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/username/project-2",
   },
-  {
-    title: "Project Three",
-    description: "E-commerce platform with 3D product viewer.",
-    tech: ["Next.js", "Three.js", "Stripe", "Prisma"],
-    image: "/project-3.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project-3",
-  },
-  {
-    title: "Project Four",
-    description: "Mobile-first social media analytics tool.",
-    tech: ["React Native", "GraphQL", "AWS", "TensorFlow"],
-    image: "/project-4.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project-4",
-  },
 ] as const;
 
 export const experiences = [
@@ -91,3 +72,12 @@ export const socialLinks = [
   { label: "Twitter", href: "https://twitter.com/username" },
   { label: "Email", href: "mailto:hello@example.com" },
 ] as const;
+
+
+export const aboutMe =[
+  {
+    desc1: "Hello, I'm Galang, a full-stack developer with a passion for building innovative web applications.",
+    desc2: "I specialize in Laravel, React, and I'm always looking for new challenges to grow my skills.",
+    desc3: "I'm a team player and a quick learner, and I'm confident I can bring value to any project.",
+  }
+]

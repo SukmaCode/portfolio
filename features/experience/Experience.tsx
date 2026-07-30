@@ -23,7 +23,7 @@ export default function Experience() {
         </motion.div>
 
         <div className="relative mx-auto max-w-3xl">
-          <div className="absolute left-[19px] top-0 h-full w-px bg-gradient-to-b from-neon-cyan via-neon-purple to-transparent" />
+          <div className="absolute left-4.75 top-0 h-full w-px bg-linear-to-b from-neon-cyan via-neon-purple to-transparent" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -35,7 +35,7 @@ export default function Experience() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="relative flex gap-8 pl-12"
               >
-                <div className="absolute left-3 top-1 h-3 w-3 rounded-full bg-neon-cyan shadow-[0_0_12px_rgba(34,211,238,0.5)]" />
+                <div className="absolute left-3.25 top-1 h-3 w-3 rounded-full bg-neon-cyan shadow-[0_0_12px_rgba(34,211,238,0.5)]" />
 
                 <div className="glass flex-1 rounded-[24px] p-6">
                   <div className="mb-1 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">

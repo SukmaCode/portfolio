@@ -28,7 +28,7 @@ export default function ProjectCard({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
       whileHover={{ y: -8 }}
-      className="glass-hover group rounded-[24px] overflow-hidden"
+      className="glass-hover group rounded-md overflow-hidden"
     >
       <div className="aspect-video bg-surface-light flex items-center justify-center overflow-hidden">
         <div className="text-4xl opacity-20 group-hover:scale-110 transition-transform duration-500">

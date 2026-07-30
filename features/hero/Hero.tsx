@@ -22,10 +22,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-display mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl"
+          className="font-display mb-6 text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl"
         >
           Creative{" "}
-          <span className="text-gradient">Full Stack</span>
+          <span>Full Stack</span>
           <br />
           Developer
         </motion.h1>

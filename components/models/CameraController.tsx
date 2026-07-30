@@ -2,7 +2,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 export default function CameraController() {
-  const target = useRef({ x: 0, y: 0, z: 0 });
+  const target = useRef({ x: 0, y: 50, z: 0 });
 
   useFrame(({ pointer, camera }) => {
     const dx = pointer.x * 0.3 - target.current.x;

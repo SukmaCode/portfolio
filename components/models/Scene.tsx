@@ -9,6 +9,7 @@ import {
 import Staircase from "./Staircase";
 import Particles from "./Particles";
 import SceneEffects from "./SceneEffects";
+import CameraController from "./CameraController";
 
 export default function Scene() {
   return (

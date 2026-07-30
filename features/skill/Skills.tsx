@@ -68,10 +68,9 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-hover rounded-[24px] p-6"
+              className="glass-hover rounded-md p-6"
             >
               <div className="mb-4 flex items-center gap-3">
-                <span className="text-2xl">{category.icon}</span>
                 <h3 className="font-display text-lg font-semibold">
                   {category.title}
                 </h3>
@@ -91,7 +90,7 @@ export default function Skills() {
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                          className="h-full rounded-full bg-gradient-to-r from-neon-cyan to-neon-blue"
+                          className="h-full rounded-full bg-linear-to-r from-neon-cyan to-neon-blue"
                         />
                       </div>
                       <span className="text-xs font-medium text-text-muted">

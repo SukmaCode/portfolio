@@ -4,7 +4,7 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-export default function Particles({ count = 2000 }) {
+export default function Particles({ count = 10000 }) {
   const mesh = useRef<THREE.Points>(null);
 
   const positions = useMemo(() => {

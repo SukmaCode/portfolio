@@ -1,19 +1,20 @@
 'use client'
 
 import { motion } from "framer-motion";
+import { aboutMe } from "@/data";
 
 const stats = [
-  { label: "Years Experience", value: "6+" },
-  { label: "Projects Completed", value: "50+" },
-  { label: "Happy Clients", value: "30+" },
-  { label: "Technologies", value: "20+" },
+  { label: "Years Experience", value: "3+" },
+  { label: "Projects Completed", value: "10" },
+  { label: "Happy Clients", value: "1" },
+  { label: "Technologies", value: "10+" },
 ];
 
 const timeline = [
-  { year: "2024", event: "Senior Developer at Tech Co" },
-  { year: "2022", event: "Started Full Stack Role" },
-  { year: "2020", event: "Began Frontend Career" },
-  { year: "2018", event: "Started Coding Journey" },
+  { year: "2023", event: "I start to learn HTML, CSS, JavaScript" },
+  { year: "2024", event: "I start to learn PHP, Laravel, MySQL in Campus" },
+  { year: "2025", event: "I start to learn React, Next.js, TypeScript" },
+  { year: "2026", event: "I start to freelance" },
 ];
 
 export default function About() {
@@ -32,7 +33,7 @@ export default function About() {
           </p>
           <h2 className="font-display text-4xl font-bold md:text-5xl">
             Passionate About{" "}
-            <span className="text-gradient">Great Code</span>
+            <span>Great Code</span>
           </h2>
         </motion.div>
 
@@ -42,22 +43,21 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-[24px] p-8 md:p-10"
+            className="glass rounded-md p-8 md:p-10"
           >
             <h3 className="font-display mb-4 text-2xl font-semibold">
               Who I Am
             </h3>
-            <p className="leading-relaxed text-text-secondary">
-              I'm a full stack developer with a passion for building beautiful,
-              performant web applications. With years of experience across the
-              entire tech stack, I bring ideas to life through clean code and
-              thoughtful design.
-            </p>
-            <p className="mt-4 leading-relaxed text-text-secondary">
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open source, or experimenting with 3D graphics and
-              creative coding.
-            </p>
+            {aboutMe.map((item) => (
+              <p key={item.desc1} className="leading-relaxed text-white">
+                {item.desc1}
+              </p>
+            ))}
+            {aboutMe.map((item) => (
+              <p key={item.desc2} className="mt-4 leading-relaxed text-white">
+                {item.desc2}
+              </p>
+            ))}
           </motion.div>
 
           <motion.div
@@ -65,7 +65,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-[24px] p-8 md:p-10"
+            className="glass rounded-md p-8 md:p-10"
           >
             <h3 className="font-display mb-6 text-2xl font-semibold">
               Timeline
@@ -81,7 +81,7 @@ export default function About() {
                     <span className="text-sm font-medium text-neon-cyan">
                       {item.year}
                     </span>
-                    <p className="text-text-secondary">{item.event}</p>
+                    <p className="text-white">{item.event}</p>
                   </div>
                 </div>
               ))}
@@ -99,12 +99,12 @@ export default function About() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="glass rounded-[24px] p-6 text-center"
+              className="glass rounded-md p-6 text-center"
             >
               <div className="font-display text-3xl font-bold text-gradient">
                 {stat.value}
               </div>
-              <div className="mt-2 text-sm text-text-muted">{stat.label}</div>
+              <div className="mt-2 text-sm text-white">{stat.label}</div>
             </div>
           ))}
         </motion.div>

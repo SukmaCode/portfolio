@@ -28,7 +28,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-[24px] p-8 md:p-10"
+            className="glass rounded-md p-8 md:p-10"
           >
             <h3 className="font-display mb-6 text-2xl font-semibold">
               Send a Message
@@ -72,7 +72,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center gap-6"
           >
-            <div className="glass rounded-[24px] p-8 md:p-10">
+            <div className="glass rounded-md p-8 md:p-10">
               <h3 className="font-display mb-4 text-2xl font-semibold">
                 Find Me On
               </h3>
@@ -90,7 +90,7 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-            <div className="glass rounded-[24px] p-8 md:p-10">
+            <div className="glass rounded-md p-8 md:p-10">
               <h3 className="font-display mb-2 text-2xl font-semibold">
                 Let's Talk
               </h3>

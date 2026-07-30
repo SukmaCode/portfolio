@@ -8,11 +8,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const STAIRCASE_URL = "/models/stair_without_texture_v2.glb";
+const MODEL = "/models/stair_without_texture_v2.glb";
 
 export default function Staircase() {
   const group = useRef<THREE.Group>(null);
-  const { scene } = useGLTF(STAIRCASE_URL);
+  const { scene } = useGLTF(MODEL);
 
   useEffect(() => {
     scene.traverse((child) => {
@@ -34,7 +34,7 @@ export default function Staircase() {
     ScrollTrigger.refresh();
 
     gsap.to(group.current.rotation, {
-      y: 3 + Math.PI * 2,
+      y: 3 + Math.PI * 4,
       ease: "none",
       scrollTrigger: {
         trigger: document.documentElement,
@@ -67,4 +67,4 @@ export default function Staircase() {
   );
 }
 
-useGLTF.preload(STAIRCASE_URL);
+useGLTF.preload(MODEL);
