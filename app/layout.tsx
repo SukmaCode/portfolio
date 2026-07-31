@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
-import Scene from "@/components/models/Scene";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -15,10 +14,79 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = "https://sukmacode-portfolio.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Portfolio | Creative Full Stack Developer",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Galang | Creative Full Stack Developer",
+    template: "%s | Galang",
+  },
   description:
-    "A passionate full stack developer specializing in web development, UI/UX design, and immersive 3D experiences.",
+    "Portofolio Galang — full stack developer spesialis Laravel, React, dan Next.js. Membangun web aplikasi modern dengan performa tinggi dan pengalaman 3D interaktif.",
+
+  keywords: [
+    "full stack developer",
+    "web developer",
+    "Laravel",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Three.js",
+    "portfolio",
+    "Galang",
+    "SukmaCode",
+  ],
+  authors: [{ name: "Galang", url: "https://github.com/SukmaCode" }],
+  creator: "Galang",
+  publisher: "Galang",
+
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: siteUrl,
+    siteName: "Galang Portfolio",
+    title: "Galang | Creative Full Stack Developer",
+    description:
+      "Portofolio Galang — full stack developer spesialis Laravel, React, dan Next.js.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Galang Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Galang | Creative Full Stack Developer",
+    description:
+      "Portofolio Galang — full stack developer spesialis Laravel, React, dan Next.js.",
+    images: ["/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  alternates: {
+    canonical: siteUrl,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +96,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
